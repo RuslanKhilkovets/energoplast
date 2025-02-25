@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Raleway:wght@700&family=Roboto:wght@400;700&family=Ubuntu:wght@500&display=swap');
+@import 'global/*.scss';
+@import '**/_*.scss';
+@import '../components/**/*.scss';
+
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;VaccineQu
+}
+
+ul{
+    padding-block-start: 0;
+    margin-block-start: 0;
+}
+
+*{
+    font-family: Ubuntu;
+}
+
+.global-container{
+    width: min(91.25rem, 100%);
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.global-logo--text {
+    color: #F75532;
+    font-family: Ubuntu;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.default-btn{
+    border-radius: 0.625rem;
+    background: #FE4610;
+    padding: 1rem 1.81rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: .4s;
+    &__text{
+        color: #fff;
+        text-align: center;
+    }
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #FE4610;
+        transition: .4s;
+    }
+    &:hover &__text{
+        color: #000;
+    }
+}
+
+.default-btn-disabled{
+    border-radius: 0.625rem;
+    background: #ffffff;
+    padding: 1rem 1.81rem;
+    border: 1px solid  #B9C0C1;
+    cursor: pointer;
+    transition: .4s;
+    &__text{
+        transition: .4s;
+
+        color: #B9C0C1;
+        font-family: Ubuntu;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;    
+    }
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #FE4610;
+        transition: .4s;
+    }
+    &:hover &__text{
+        transition: .4s;
+        color: #000;
+    }
+}

@@ -1,0 +1,66 @@
+.get-vaccine {
+    margin: 3rem 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10.75rem;
+    }
+}
+
+
+.get-vacine-description {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &__title {
+        color: #001F29;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 4rem;
+    }
+
+    &__subtitle {
+        color: #B9C0C1;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem; 
+    }
+
+    &__btns {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+
+.get-vaccine-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    &__item {
+        border-radius: 0.625rem;
+        width: 10rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__item--subitem {
+        width: 100%;
+        height: 11.5rem;
+        background-color: #FFE1D8;
+        border-radius: 0.625rem;
+
+    }
+}
+
+@media (max-width: 1024px){
+    .get-vaccine-images{
+        display: none;
+    }
+}

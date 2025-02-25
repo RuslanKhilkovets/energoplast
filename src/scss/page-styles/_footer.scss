@@ -1,0 +1,51 @@
+.footer{
+    padding: 60px 0;
+}
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 6rem;
+
+}
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 22.5rem;
+    &__title {
+        width: min(22.5rem, 100%);
+        color: #001F29;
+        font-family: Ubuntu;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__text {
+        width: min(22.5rem, 100%);
+        color:#B9C0C1;
+        font-family: Ubuntu;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+
+    &__link {
+        color: #B9C0C1;
+        font-family: Ubuntu;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 768px){
+    .footer-list{
+        gap: 4rem;
+    }
+}
