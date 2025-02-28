@@ -1,0 +1,18 @@
+.who{
+    &__wrapper{
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        gap: 40px;
+    }
+    &__subtitle{
+        max-width: 700px;
+        text-align: center;
+    }
+    &__title{
+        font-size: 3rem;
+    }
+}

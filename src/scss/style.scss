@@ -3,13 +3,16 @@
 @import '**/_*.scss';
 @import '../components/**/*.scss';
 
+html, body{
+    overflow: hidden;
+}
 
 ul li{
     list-style: none;
 }
 
 a{
-    text-decoration: none;VaccineQu
+    text-decoration: none;
 }
 
 ul{
@@ -21,6 +24,10 @@ ul{
     font-family: Ubuntu;
 }
 
+.block{
+    border-radius: 30px;
+    padding: 20px;
+}
 .global-container{
     width: min(91.25rem, 100%);
     padding: 20px;
@@ -28,7 +35,7 @@ ul{
 }
 
 .global-logo--text {
-    color: #F75532;
+    color: #09143c;
     font-family: Ubuntu;
     font-size: 1.5rem;
     font-style: normal;
@@ -38,8 +45,9 @@ ul{
 
 .default-btn{
     border-radius: 0.625rem;
-    background: #FE4610;
+    background: #09143c;
     padding: 1rem 1.81rem;
+    width: min(300px, 100%);
     border: 1px solid transparent;
     cursor: pointer;
     transition: .4s;
@@ -49,38 +57,10 @@ ul{
     }
     &:hover{
         background-color: transparent;
-        border: 1px solid #FE4610;
+        border: 1px solid #09143c;
         transition: .4s;
     }
     &:hover &__text{
-        color: #000;
-    }
-}
-
-.default-btn-disabled{
-    border-radius: 0.625rem;
-    background: #ffffff;
-    padding: 1rem 1.81rem;
-    border: 1px solid  #B9C0C1;
-    cursor: pointer;
-    transition: .4s;
-    &__text{
-        transition: .4s;
-
-        color: #B9C0C1;
-        font-family: Ubuntu;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;    
-    }
-    &:hover{
-        background-color: transparent;
-        border: 1px solid #FE4610;
-        transition: .4s;
-    }
-    &:hover &__text{
-        transition: .4s;
-        color: #000;
+        color: #09143c;
     }
 }
