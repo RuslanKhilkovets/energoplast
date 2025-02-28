@@ -3,14 +3,13 @@
 @import '**/_*.scss';
 @import '../components/**/*.scss';
 
-html, body{
-    overflow: hidden;
-}
-
 ul li{
     list-style: none;
 }
 
+main{
+    padding-top: 80px;
+}
 a{
     text-decoration: none;
 }
