@@ -3,9 +3,6 @@
 @import '**/_*.scss';
 @import '../components/**/*.scss';
 
-ul li{
-    list-style: none;
-}
 
 main{
     padding-top: 80px;
@@ -19,8 +16,14 @@ ul{
     margin-block-start: 0;
 }
 
+ul li{
+    list-style: none!important;
+}
+
 *{
     font-family: Ubuntu;
+    margin: 0;
+    padding: 0;
 }
 
 .block{
@@ -62,4 +65,8 @@ ul{
     &:hover &__text{
         color: #09143c;
     }
+}
+
+body.open-burger{
+    overflow: hidden;
 }
