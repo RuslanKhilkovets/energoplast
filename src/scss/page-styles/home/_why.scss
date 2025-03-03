@@ -17,9 +17,16 @@
         justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
+        &-block{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
         &--item{
-            width: min(300px, 100%);
-            min-width: 300px;
+            width: min(200px, 100%);
+            min-width: 200px;
+            max-width: 300px;
             flex: 1;
         }
     }
