@@ -34,6 +34,10 @@
             color: #F75532;
             transition: .4s;
         }
+        &.active { 
+            color: #F75532;
+            font-weight: 600;
+        }
     }
 }
 

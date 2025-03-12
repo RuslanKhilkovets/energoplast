@@ -9,4 +9,16 @@ const handleBurgerMenuOpen = () => {
   document.body.classList.toggle("open-burger");
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".navbar__list--link, .mobile-navbar__list--link");
+  const currentUrl = window.location.pathname;
+
+  links.forEach(link => {
+      if (link.getAttribute("href") === currentUrl) {
+          link.classList.add("active");
+      }
+  });
+});
+
+
 burger.addEventListener("click", handleBurgerMenuOpen);
