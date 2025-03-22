@@ -1,0 +1,66 @@
+.where {
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+       
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 70px;
+        margin-top: 30px;
+        color:  #001F29;
+    }
+
+    &__map {
+        flex: 0 0 70%;
+        display: flex;
+       
+    }
+
+    &__map--map {
+        border-radius: 30px;
+        border: 0;
+        flex: 1; 
+        height: 500px;
+        width: 100%; 
+    }
+
+    &__address {
+        flex: 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+    }
+
+    &__address--title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color:  #001F29;
+    }
+    &__address--address{
+        font-size: 1.2rem;
+        color:  #001F29;
+    }
+}
+@media screen and (max-width: 768px) {
+    .where{
+        &__wrapper{
+            flex-wrap: wrap; 
+        }
+        &__address{
+            flex: 0 0 100%;
+        }
+        &__map{
+            flex: 0 0 100%;
+        }
+        &__title{
+            margin-top: 15px;
+            margin-bottom: 45px;        
+        }
+    }
+}

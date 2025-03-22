@@ -1,0 +1,23 @@
+.about{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        display: flex;
+        align-self: center;
+        height: 600px;
+        border-radius: 30px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+    &__text{
+        font-size: 1.2rem;
+    }
+}

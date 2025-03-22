@@ -1,0 +1,30 @@
+.who{
+    &__wrapper{
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        gap: 40px;
+    }
+    &__subtitle{
+        max-width: 700px;
+        text-align: center;
+        color:  #001F29;
+    }
+    &__title{
+        font-size: 3rem;
+        color:  #001F29;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .who{
+        &__wrapper{
+            height: 500px;
+        }
+    }
+    
+}

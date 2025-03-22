@@ -1,0 +1,15 @@
+.footer{
+    margin-top: 50px;
+    background-color: #00000011;
+    padding: 50px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
