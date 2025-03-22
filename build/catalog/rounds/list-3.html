@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<title></title>
+</head>
+
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<body>
+    <header class="header">
+  <div class="global-container">
+    <div class="header__wrapper">
+      <div class="header__logo global-logo">
+        <a href="/" class="global-logo--text"><img src="../../img/logo.png" alt="Energoplast" class="logo"/></a>
+      </div>
+      <nav class="header__navbar navbar">
+        <ul class="navbar__list">
+          <li class="navbar__list--item">
+            <a href="/" class="navbar__list--link">Головна</a>
+          </li>
+          <li class="navbar__list--item">
+            <a href="/products.html" class="navbar__list--link">Товари</a>
+          </li>
+          <li class="navbar__list--item">
+            <a href="/contacts.html" class="navbar__list--link">Контакти</a>
+          </li>
+          <li class="navbar__list--item">
+            <a href="/about.html" class="navbar__list--link">Про компанію</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="burger-menu">
+        <li class="burger-menu__item"></li>
+        <li class="burger-menu__item"></li>
+        <li class="burger-menu__item"></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="mobile-navbar">
+    <ul class="mobile-navbar__list">
+      <li class="mobile-navbar__list--item">
+        <a href="/" class="mobile-navbar__list--link">Головна</a>
+      </li>
+      <li class="mobile-navbar__list--item">
+        <a href="/products.html" class="mobile-navbar__list--link">Товари</a>
+      </li>
+      <li class="mobile-navbar__list--item">
+        <a href="/contacts.html" class="mobile-navbar__list--link">Контакти</a>
+      </li>
+      <li class="mobile-navbar__list--item">
+        <a href="/about.html" class="mobile-navbar__list--link">Про компанію</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+    <main class="main">
+        <div class="global-container">
+
+            <a href="../../products.html" class="go-back">
+                Назад
+            </a>
+            <div class="products-list">
+                <p class="products-list__title">Круги</p>
+                <ul class="products-list__list">
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">2-x склад вн-вн (AISI304 / AISI316)</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">2-x склад вн-зовн</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">3-x склад. зв-зв</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">3-x склад. вн-вн</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">3-x ход. Т / Г</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">Клапан зв / зв</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">Клапан вн / вн</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">Фільр в / в</p>
+                    </a>
+                    <a href="#" class="products-list__item">
+                        <p class="products-list__link">Вентиль голчастий</p>
+                    </a>
+                    <div class="pagination">
+                        <a href="./list-2.html" class="pagination__link"><</a>
+                        <a href="./list.html" class="pagination__link">1</a>
+                        <a href="./list-2.html" class="pagination__link">2</a>
+                        <a href="./list-3.html" class="pagination__link pagination__link-active">3</a>
+                        <a href="./list-4.html" class="pagination__link">4</a>
+                        <a href="./list-5.html" class="pagination__link">5</a>
+                        <a href="./list-6.html" class="pagination__link">6</a>
+                        <a href="./list-7.html" class="pagination__link">7</a>
+
+                        <a href="./list-4.html" class="pagination__link">></a>
+
+                    </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="global-container">
+        <div class="footer__wrapper">
+            <div class="footer__title global-logo--text ">
+                <a href="/" class="global-logo--text"><img src="../../img/logo.png" alt="" class="logo"></a>
+
+            </div>
+            <div class="footer__contacts contact__contacts">
+                <a href="#" class="contact__link">+380966948080</a>
+                <a href="#" class="contact__link">+380960687756</a>
+                <a href="#" class="contact__link">+380966948000</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+    <script>
+        const burger = document.querySelector(".burger-menu");
+        const navbar = document.querySelector(".mobile-navbar");
+        const openModalButton = document.querySelector(".open-modal");
+        const modal = document.querySelector(".modal");
+
+        const handleBurgerMenuOpen = () => {
+            burger.classList.toggle("burger-active");
+            navbar.classList.toggle("mobile-navbar--active");
+            document.body.classList.toggle("open-burger");
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".navbar__list--link, .mobile-navbar__list--link");
+            const currentUrl = window.location.pathname;
+
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+
+        burger.addEventListener("click", handleBurgerMenuOpen);
+
+    </script>
+</body>
+
+</html>
