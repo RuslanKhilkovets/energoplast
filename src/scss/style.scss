@@ -101,12 +101,13 @@ tr:nth-child(even) {
 
 
 .go-back {
+    margin-left: 20px;
     color: #09143c;
     transition: .3s;
     position: relative;
     display: flex;
     align-items: center;
-    gap: 5px; /* Adjust spacing */
+    gap: 5px; 
     
     &::before {
         content: "";
