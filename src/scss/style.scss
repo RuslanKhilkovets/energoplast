@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,7 +33,24 @@ ul{
 ul li{
     list-style: none!important;
 }
-
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
 *{
     font-family: Ubuntu;
@@ -81,6 +99,20 @@ ul li{
     }
 }
 
+
+.go-back{
+    color: #09143c;
+    transition: .3s;
+    &:hover{
+        color: #F75532;
+        transition: .3s;
+    }
+}
+
+.text-left{
+    display: flex;
+    align-self: start;
+}
 body.open-burger{
     overflow: hidden;
 }

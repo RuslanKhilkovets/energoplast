@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+@@include('../../components/page-blocks/_head.html',{
+"lang":"en",
+"title":"",
+})
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<body>
+    @@include('../../components/page-blocks/_header.html')
+    <main class="main">
+        <div class="global-container">
+            <section class="item">
+                <a href="./list.html" class="text-left">
+                    Назад
+                </a>
+                <img src="../../img/Orgglass.png" alt="/" class="item__img">
+                <p class="item__description">Оргскло (також відоме як акриловий лист або плексиглас) — це прозорий
+                    термопластичний матеріал, виготовлений з поліметилметакрилату (PMMA). Оргскло є популярним
+                    матеріалом завдяки своїм властивостям, які роблять його ідеальним для використання в різних сферах.
+                </p>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Товщина пластин (мм)</th>
+                            <th>Розмір листа (мм)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>2050x3050</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2050x3050</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2050x3050</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2050x3050</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2050x3050</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @@include('../../catalog/buy.html')
+            </section>
+        </div>
+    </main>
+    <script>
+        const burger = document.querySelector(".burger-menu");
+        const navbar = document.querySelector(".mobile-navbar");
+        const openModalButton = document.querySelector(".open-modal");
+        const modal = document.querySelector(".modal");
+
+        const handleBurgerMenuOpen = () => {
+            burger.classList.toggle("burger-active");
+            navbar.classList.toggle("mobile-navbar--active");
+            document.body.classList.toggle("open-burger");
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".navbar__list--link, .mobile-navbar__list--link");
+            const currentUrl = window.location.pathname;
+
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+
+        burger.addEventListener("click", handleBurgerMenuOpen);
+
+    </script>
+    @@include('../../components/page-blocks/_footer.html')
+    @@include('../../components/page-blocks/_scripts.html')
+</body>
+
+</html>

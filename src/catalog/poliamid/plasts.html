@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+@@include('../../components/page-blocks/_head.html',{
+"lang":"en",
+"title":"",
+})
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<body>
+    @@include('../../components/page-blocks/_header.html')
+    <main class="main">
+        <div class="global-container">
+            <section class="item">
+                <a href="./list.html" class="text-left">
+                    Назад
+                </a>
+                <img src="../../img/KaprolonPlast.png" alt="/" class="item__img">
+                <p class="item__description">Поліамід (Капролон) ПА-6 листи — це пластини з поліаміду-6, що мають високу
+                    міцність, зносостійкість і низький коефіцієнт тертя. Відзначаються гарною ударостійкістю, стійкістю
+                    до хімічного впливу та довговічністю. Використовуються в машинобудуванні, виробництві підшипників,
+                    втулок, шестерень, напрямних і деталей, що працюють під навантаженням.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Товщина (мм)</th>
+                            <th>Розмір (мм)</th>
+                            <th>Вага 1 шт, кг</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6,0</td>
+                            <td>1000×1000</td>
+                            <td>9,0</td>
+                        </tr>
+                        <tr>
+                            <td>6,0</td>
+                            <td>1000×2000</td>
+                            <td>18,2</td>
+                        </tr>
+                        <tr>
+                            <td>8,0</td>
+                            <td>1000×1000</td>
+                            <td>11,2</td>
+                        </tr>
+                        <tr>
+                            <td>8,0</td>
+                            <td>1000×2000</td>
+                            <td>22,5</td>
+                        </tr>
+                        <tr>
+                            <td>10,0</td>
+                            <td>1000×1000</td>
+                            <td>13,5</td>
+                        </tr>
+                        <tr>
+                            <td>10,0</td>
+                            <td>1000×2000</td>
+                            <td>27,3</td>
+                        </tr>
+                        <tr>
+                            <td>15,0</td>
+                            <td>1000×1000</td>
+                            <td>20,0</td>
+                        </tr>
+                        <tr>
+                            <td>15,0</td>
+                            <td>1000×2000</td>
+                            <td>40,2</td>
+                        </tr>
+                        <tr>
+                            <td>20,0</td>
+                            <td>1000×2000</td>
+                            <td>26,0</td>
+                        </tr>
+                        <tr>
+                            <td>25,0</td>
+                            <td>1000×1000</td>
+                            <td>32,7</td>
+                        </tr>
+                        <tr>
+                            <td>30,0</td>
+                            <td>1000×1000</td>
+                            <td>38,5</td>
+                        </tr>
+                        <tr>
+                            <td>35,0</td>
+                            <td>1000×1000</td>
+                            <td>46,5</td>
+                        </tr>
+                        <tr>
+                            <td>40,0</td>
+                            <td>1000×1000</td>
+                            <td>51,8</td>
+                        </tr>
+                        <tr>
+                            <td>45,0</td>
+                            <td>1000×1000</td>
+                            <td>58,3</td>
+                        </tr>
+                        <tr>
+                            <td>50,0</td>
+                            <td>1000×1000</td>
+                            <td>63,7</td>
+                        </tr>
+                        <tr>
+                            <td>55,0</td>
+                            <td>1000×1000</td>
+                            <td>71,6</td>
+                        </tr>
+                        <tr>
+                            <td>60,0</td>
+                            <td>1000×1000</td>
+                            <td>75,3</td>
+                        </tr>
+                        <tr>
+                            <td>70,0</td>
+                            <td>1000×1000</td>
+                            <td>89,0</td>
+                        </tr>
+                        <tr>
+                            <td>80,0</td>
+                            <td>1000×1000</td>
+                            <td>102,8</td>
+                        </tr>
+                        <tr>
+                            <td>90,0</td>
+                            <td>1000×1000</td>
+                            <td>114,0</td>
+                        </tr>
+                        <tr>
+                            <td>100,0</td>
+                            <td>1000×1000</td>
+                            <td>127,5</td>
+                        </tr>
+                        <tr>
+                            <td>110,0</td>
+                            <td>1000×1000</td>
+                            <td>134,0</td>
+                        </tr>
+                        <tr>
+                            <td>120,0</td>
+                            <td>1000×1000</td>
+                            <td>149,0</td>
+                        </tr>
+                        <tr>
+                            <td>130,0</td>
+                            <td>1000×1000</td>
+                            <td>164,0</td>
+                        </tr>
+                        <tr>
+                            <td>140,0</td>
+                            <td>1000×1000</td>
+                            <td>175,0</td>
+                        </tr>
+                        <tr>
+                            <td>150,0</td>
+                            <td>1000×1000</td>
+                            <td>185,5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                @@include('../../catalog/buy.html')
+
+
+            </section>
+        </div>
+    </main>
+    <script>
+        const burger = document.querySelector(".burger-menu");
+        const navbar = document.querySelector(".mobile-navbar");
+        const openModalButton = document.querySelector(".open-modal");
+        const modal = document.querySelector(".modal");
+
+        const handleBurgerMenuOpen = () => {
+            burger.classList.toggle("burger-active");
+            navbar.classList.toggle("mobile-navbar--active");
+            document.body.classList.toggle("open-burger");
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".navbar__list--link, .mobile-navbar__list--link");
+            const currentUrl = window.location.pathname;
+
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+
+        burger.addEventListener("click", handleBurgerMenuOpen);
+
+    </script>
+    @@include('../../components/page-blocks/_footer.html')
+    @@include('../../components/page-blocks/_scripts.html')
+</body>
+
+</html>
