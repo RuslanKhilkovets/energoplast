@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+@@include('../../components/page-blocks/_head.html',{ "lang":"en", "title":"",
+})
+<link rel="stylesheet" href="../../css/style.min.css" />
+
+<body>
+  @@include('../../components/page-blocks/_header.html')
+  <main class="main">
+    <div class="global-container">
+      <section class="item">
+        <a href="./list-4.html" class="text-left go-back"> Назад </a>
+        <img src="../../img/KaprolonRod.png" alt="/" class="item__img" />
+        <p class="item__description">
+          Ущільнення, силікон — це тип ущільнювального матеріалу, виготовлений
+          із силіконового каучуку, який використовується для забезпечення
+          герметичності між двома або більше поверхнями. Силіконові ущільнення
+          широко застосовуються в різних галузях, таких як харчова
+          промисловість, медичне обладнання, автомобільна промисловість та в
+          системах вентиляції.
+        </p>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Dn, DIN 11850</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>125</td>
+            </tr>
+            <tr>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>200</td>
+            </tr>
+          </tbody>
+        </table>
+
+        @@include('../../catalog/buy.html')
+      </section>
+    </div>
+  </main>
+  <script>
+    const burger = document.querySelector(".burger-menu");
+    const navbar = document.querySelector(".mobile-navbar");
+    const openModalButton = document.querySelector(".open-modal");
+    const modal = document.querySelector(".modal");
+
+    const handleBurgerMenuOpen = () => {
+      burger.classList.toggle("burger-active");
+      navbar.classList.toggle("mobile-navbar--active");
+      document.body.classList.toggle("open-burger");
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(
+        ".navbar__list--link, .mobile-navbar__list--link"
+      );
+      const currentUrl = window.location.pathname;
+
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentUrl) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    burger.addEventListener("click", handleBurgerMenuOpen);
+  </script>
+  @@include('../../components/page-blocks/_footer.html')
+  @@include('../../components/page-blocks/_scripts.html')
+</body>

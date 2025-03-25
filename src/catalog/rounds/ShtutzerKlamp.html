@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+@@include('../../components/page-blocks/_head.html',{ "lang":"en", "title":"",
+})
+<link rel="stylesheet" href="../../css/style.min.css" />
+
+<body>
+  @@include('../../components/page-blocks/_header.html')
+  <main class="main">
+    <div class="global-container">
+      <section class="item">
+        <a href="./list-4.html" class="text-left go-back"> Назад </a>
+        <img src="../../img/KaprolonRod.png" alt="/" class="item__img" />
+        <p class="item__description">
+          Штуцер кламп (AISI 304) — це з'єднувальний елемент, який
+          використовується для підключення труб до обладнання або інших систем у
+          промислових установках. Штуцер кламп має форму короткої трубки з
+          нарізкою для з'єднання з іншими трубами, що утримуються за допомогою
+          кламп-з'єднання. AISI 304 — це тип нержавіючої сталі, яка має високу
+          корозійну стійкість, що робить такі штуцери ідеальними для
+          використання в агресивних середовищах, таких як харчова, фармацевтична
+          або хімічна промисловість, де з'єднання повинні витримувати високі
+          вимоги до чистоти та довговічності. Штуцери кламп з AISI 304 можуть
+          бути оснащені ущільненнями, що забезпечують герметичність з'єднання.
+          Вони зазвичай використовуються в трубопроводах для транспортування
+          рідин або газів.
+        </p>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Dn, DIN 11850</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>125</td>
+            </tr>
+            <tr>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>200</td>
+            </tr>
+          </tbody>
+        </table>
+
+        @@include('../../catalog/buy.html')
+      </section>
+    </div>
+  </main>
+  <script>
+    const burger = document.querySelector(".burger-menu");
+    const navbar = document.querySelector(".mobile-navbar");
+    const openModalButton = document.querySelector(".open-modal");
+    const modal = document.querySelector(".modal");
+
+    const handleBurgerMenuOpen = () => {
+      burger.classList.toggle("burger-active");
+      navbar.classList.toggle("mobile-navbar--active");
+      document.body.classList.toggle("open-burger");
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(
+        ".navbar__list--link, .mobile-navbar__list--link"
+      );
+      const currentUrl = window.location.pathname;
+
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentUrl) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    burger.addEventListener("click", handleBurgerMenuOpen);
+  </script>
+  @@include('../../components/page-blocks/_footer.html')
+  @@include('../../components/page-blocks/_scripts.html')
+</body>
